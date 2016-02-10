@@ -117,6 +117,7 @@ public class CountriesPath extends Path {
 
         public void onItemClick(int position) {
             Toast.makeText(getContext(), "Country Selected" + response.get(position).countryName, Toast.LENGTH_SHORT).show();
+//            Flow.get(getContext()).setHistory(History.single(new CountriesDescription(response.get(position).countryName)), Flow.Direction.FORWARD);
             Flow.get(getContext()).set(new CountriesDescription(response.get(position).countryName));
         }
 

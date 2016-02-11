@@ -29,7 +29,7 @@ import rx.schedulers.Schedulers;
 /**
  * Created by kushagarlall on 04/02/16.
  */
-@Layout(R.layout.countries_list)
+@Layout(R.layout.countries_desc_list)
 @WithComponent(CountriesDescription.Component.class)
 public class CountriesDescription extends Path {
     private String countryName;

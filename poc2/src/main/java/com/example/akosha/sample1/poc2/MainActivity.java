@@ -71,11 +71,17 @@ public class MainActivity extends Activity implements Flow.Dispatcher {
         super.onDestroy();
     }
 
-    @Override public void onBackPressed() {
-        if (containerAsBackTarget.onBackPressed()) return;
+    @Override
+    public void onBackPressed() {
+        if (containerAsBackTarget.onBackPressed()) {
+            //restore the saved instance of presenter
+            return;
+        }
         if (flowDelegate.onBackPressed()) return;
+
         super.onBackPressed();
     }
+
 
     @SuppressWarnings("deprecation") // https://code.google.com/p/android/issues/detail?id=151346
     @Override
